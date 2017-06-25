@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <title>게시물 작성</title>
+</head>
+
+<body style="background-color: skyblue">
+
+<h1 style="margin:30px;color:white; text-shadow: 2px 2px 4px gray;">새로운 게시물을 입력해 주세요. </h1>
+<form action="/posts/create" method="post">
+    <p style="margin:20px">제목</p>
+    <input type="text" name="input_title" style="margin:30px">
+    <p style="margin:20px">내용</p>
+    <input type="text" name="input_content" style="margin:30px">
+    <p style="margin:20px">작성자</p>
+    <input type="text" name="input_name" style="margin:30px">
+   <button type="submit" class="btn btn-secondary" style="margin:30px">제출</button>
+</form>
+</body>
+
+</html>

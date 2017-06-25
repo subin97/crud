@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <title>게시물 보기</title>
+</head>
+<body style="background-color: skyblue">
+ <h1 style="margin:30px;color:white; text-shadow: 2px 2px 4px gray;"><%= @post.id%>번 post입니다</h1>
+<table class="table" style="margin:20px">
+    <thead>
+          <tr>
+              <th>제목</th>
+              <th>내용</th>
+              <th>작성자</th>
+          </tr>
+    </thead>
+    <tbody>
+          <tr>
+              <td><%= @post.title %></td>
+              <td><%= @post.content %></td>
+              <td><%=@post.name %></td>
+          </tr>
+    </tbody>
+</table>
+
+<div style="margin:30px">
+<a href="/"><button type="button" class="btn btn-secondary">목록</button></a>
+<a href="/posts/edit/<%= @post.id%>"><button type="button" class="btn btn-secondary">수정하기</button></a>
+<a href="/posts/destroy/<%= @post.id%>" data-confirm="진짜로 삭제하시겠습니까?" data-method="post"><button type="button" class="btn btn-secondary">삭제하기</button></a>
+
+</div>
+</body>
+</html>

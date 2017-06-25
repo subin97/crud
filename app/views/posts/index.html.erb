@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <title>게시물 목록</title>
+</head>
+
+<body style="background-color: skyblue">
+
+<h1 style="margin:30px;color:white; text-shadow: 2px 2px 4px gray;">지금까지 작성된 post들입니다.</h1>
+
+  <table class="table" style="margin:20px">
+      <thead>
+          <tr>
+              <th>번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <% @posts.each do |post|%>
+              <td><a href='/posts/show/<%=post.id%>'><%=post.id%></a></td>
+              <td><a href='/posts/show/<%=post.id%>'><%= post.title%></a></td>
+              <td><a href='/posts/show/<%=post.id%>'><%= post.name%></a></td>
+          </tr>
+          <% end %>
+      </tbody>
+</table>
+
+<h2 style="margin:30px"><a href='/posts/new'><button type="button" class="btn btn-secondary">새 글 쓰러가기</button><a></h2>
+</body>
+</html>
