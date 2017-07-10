@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  get 'mypage/main'
+
+  get 'game/main'
+  get 'game/result'
+
   root 'posts#home'
+  get 'posts/home' => 'posts#home'
   
   # Create
   get '/posts/new'=>'posts#new'

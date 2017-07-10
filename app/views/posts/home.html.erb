@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <title>main</title>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+<body>
 
-<body style="background-color: skyblue">
-<h1 style="margin:150px;color:white; text-shadow: 2px 2px 4px gray; text-align:center">당신이 원하던 바로 그 게시판</h1>
-<a href="/posts/index"><button type="button" class="btn btn-secondary" style=" margin-left:50% ;margin-right:50%;margin-bottom:300px">Click!</button></a>
+<div class="jumbotron text-center">
+  <h1>New Homepage</h1>
+  <p>자기소개 페이지, 랜덤게임, 게시판을 한번에 보자!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>자기소개 페이지</h3>
+      <p>저를 소개합니다</p>
+      <a href="/mypage/main"><button type="button" class="btn btn-default">자기소개 페이지로 이동하기</button></a>
+    </div>
+    <div class="col-sm-4">
+      <h3>랜덤게임</h3>
+      <p>심심할때 즐기는 랜덤게임</p>
+      <a href="/game/main"><button type="button" class="btn btn-default">랜덤게임 페이지로 이동하기</button></a>
+    </div>
+    <div class="col-sm-4">
+      <h3>게시판</h3>        
+      <p>당신의 목소리를 들려주세요</p>
+      <a href="/posts/index"><button type="button" class="btn btn-default">게시판 페이지로 이동하기</button></a>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
